@@ -37,4 +37,6 @@ typedef struct {
     f32 matrix[4][4];            // mf
 } model_info;
 
+extern void modelInfo_setPosVec3s(model_info* self, vec3s* position);
+
 #endif

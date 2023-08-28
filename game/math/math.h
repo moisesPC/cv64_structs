@@ -1,7 +1,7 @@
 #ifndef MATH_H
 #define MATH_H
 
-#include <ultratypes.h>
+#include <ultra64.h>
 
 typedef struct {
     s16 x, y;

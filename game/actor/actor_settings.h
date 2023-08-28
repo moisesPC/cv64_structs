@@ -2,7 +2,7 @@
 #define ACTOR_SETTINGS_H
 
 #include "math.h"
-#include <ultratypes.h>
+#include <ultra64.h>
 
 typedef struct {
     vec3s position;

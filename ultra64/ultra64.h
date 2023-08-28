@@ -20,6 +20,4 @@
 #include "ultra64/R4300.h"
 #include "ultra64/ucode.h"
 
-#define VTX(x,y,z,s,t,crnx,cgny,cbnz,a) { { { x, y, z }, 0, { s, t }, { crnx, cgny, cbnz, a } } }
-
 #endif

@@ -1,7 +1,7 @@
 #ifndef MODULE_H
 #define MODULE_H
 
-#include <ultratypes.h>
+#include <ultra64.h>
 
 typedef struct {
     u8 timer;                      // Could also be "number of accesses to function"

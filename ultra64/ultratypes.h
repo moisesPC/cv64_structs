@@ -1,6 +1,3 @@
-// Credits to the OoT decomp:
-// https://github.com/zeldaret/oot/blob/efe485f01720034ea9e844b3f385e3352bb63b20/include/ultra64/ultratypes.h
-
 #ifndef ULTRA64_ULTRATYPES_H
 #define ULTRA64_ULTRATYPES_H
 
@@ -27,6 +24,7 @@ typedef float  f32;
 typedef double f64;
 
 #define NULL    (void *)0
+#define NPTR    (void *)0       // Leftover strings in the ROM suggest the usage of "NPTR" instead of "NULL"
 #define TRUE 1
 #define FALSE 0
 
