@@ -2,7 +2,6 @@
 #define MODEL_INFO_H
 
 #include <color.h>
-#include <gbi.h>
 
 typedef struct {
     s16 type;
