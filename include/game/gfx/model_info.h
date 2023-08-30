@@ -1,7 +1,8 @@
 #ifndef MODEL_INFO_H
 #define MODEL_INFO_H
 
-#include <color.h>
+#include "color.h"
+#include <ultra64.h>
 
 typedef struct {
     s16 type;
@@ -33,9 +34,10 @@ typedef struct {
     angle field41_0x52;
     vec3f size;
     void* field45_0x64;          // map_actor_model*
-    f32 matrix[4][4];            // mf
+    mf matrix;
 } model_info;
 
 extern void modelInfo_setPosVec3s(model_info* self, vec3s* position);
+extern model_info* modelInfo_createRootNode(u32, void*);
 
 #endif

@@ -5,6 +5,11 @@
 
 #define MODULE_SIZE 0x74
 
+enum ModuleHeader_flags {
+    PAUSE      = (1 << 14),
+    TOP        = (1 << 15)
+};
+
 typedef struct {
     u8 timer;                      // Could also be "number of accesses to function"
     u8 function;                   // ID within the functions array
@@ -23,11 +28,13 @@ typedef struct {
     struct ModuleHeader* child;
 } ModuleHeader;                            // Size = 0x20
 
+extern void* module_create(void* parent, s32 ID);
+extern void* module_createAndSetChild(void* parent, s32 ID);
 extern void goToNextFunc(u16 current_functionInfo[], s16* functionInfo_ID);
 extern void goToFunc(u16 current_functionInfo[], s16* functionInfo_ID, s32 function);
 
 // Mostly used inside entrypoint functions
-// Comma in the 3rd line needed for matching
+// Commas at the end of statements needed for matching
 #define TRANSITION(self, functions_array)                                                  \
     s16 funcID;                                                                            \
     funcID = self->header.functionInfo_ID + 1;                                             \
@@ -35,5 +42,21 @@ extern void goToFunc(u16 current_functionInfo[], s16* functionInfo_ID, s32 funct
     self->header.current_function[funcID].timer++;                                         \
     konamiLogo_functions[self->header.current_function[funcID].function](self);            \
     self->header.functionInfo_ID--;
+
+// functionInfo* curFunc;
+// void (*ptr_goToFunc)(u16[], s16*, s32) = goToFunc;
+#define GO_TO_FUNC(self, functions_array, curFunc, goToFunc, function_array_ID)                            \
+    goToFunc(self->header.current_function, &self->header.functionInfo_ID, function_array_ID);             \
+    curFunc = &self->header.current_function[self->header.functionInfo_ID];                                \
+    curFunc->timer++,                                                                                      \
+    functions_array[curFunc->function](self);
+
+// functionInfo* curFunc;
+// void (*ptr_goToNextFunc)(u16[], s16*) = goToNextFunc;
+#define GO_TO_NEXT_FUNC(self, functions_array, curFunc, goToNextFunc)                                      \
+    goToNextFunc(self->header.current_function, &self->header.functionInfo_ID);                            \
+    curFunc = &self->header.current_function[self->header.functionInfo_ID];                                \
+    curFunc->timer++,                                                                                      \
+    functions_array[curFunc->function](self);
 
 #endif

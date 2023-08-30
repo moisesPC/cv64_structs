@@ -210,4 +210,14 @@ typedef struct {
     u8 field60_0xa7;
 } struct_28;
 
+// For "axis" argument from playerIsInsideActorSpawnRadius()
+enum axis_enum {
+    X =   1,
+    Y =   2,
+    Z =   4,
+    XYZ = 8
+};
+
+extern u32 playerIsInsideActorSpawnRadius(model_info* player_model, model_info* actor_model, f32 actor_spawn_radius, u32 axis);
+
 #endif

@@ -1,0 +1,37 @@
+#ifndef MAP_H
+#define MAP_H
+
+enum maps {
+    MORI,
+    TOU,
+    TOUOKUJI,
+    NAKANIWA,
+    BEKKAN_1F,
+    BEKKAN_2F,
+    MEIRO_TEIEN,
+    CHIKA_KODO,
+    CHIKA_SUIRO,
+    HONMARU_B1F,
+    HONMARU_1F,
+    HONMARU_2F,
+    HONMARU_3F_MINAMI,
+    HONMARU_4F_MINAMI,
+    HONMARU_3F_KITA,
+    HONMARU_5F,
+    SHOKEI_TOU,
+    MAHOU_TOU,
+    KAGAKU_TOU,
+    KETTOU_TOU,
+    TURO_TOKEITOU,
+    TENSHU,
+    ENDING_DUMMY,
+    TOKEITOU_NAI,
+    DRACULA,
+    ROSE,
+    BEKKAN_BOSS,
+    TOU_TURO,
+    ENDING,
+    TEST_GRID
+};
+
+#endif

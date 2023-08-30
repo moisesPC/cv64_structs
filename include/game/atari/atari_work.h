@@ -78,4 +78,9 @@ typedef struct {
     u8 field_0x98[4];
 } atari_base_work;
 
+extern void atari_work_table_init();
+extern atari_base_work* atariBaseWork_create(model_info* attached_bone);
+extern atari_data_work* atariDataWork_create(model_info* attached_bone, u16 param_2);
+extern u32 atariBaseWork_attachCollider(atari_base_work* self, atari_data_work* collider, u32 param_3);
+
 #endif

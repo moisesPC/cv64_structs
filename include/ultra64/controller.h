@@ -118,6 +118,7 @@
 #define BTN_Z           0x2000
 #define BTN_B           0x4000
 #define BTN_A           0x8000
+#define RECENTER_BUTTON 0x1080
 
 typedef union {
     struct {

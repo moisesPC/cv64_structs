@@ -28,17 +28,7 @@ typedef double f64;
 #define TRUE 1
 #define FALSE 0
 
-typedef float MtxF_t[4][4];
-typedef union {
-    MtxF_t mf;
-    struct {
-        // Note: The order displayed here is the transpose of the order in which matrices are typically written.
-        // For example, [xw, yw, zw] is the translation part of the matrix, not [wx, wy, wz].
-        float xx, yx, zx, wx,
-              xy, yy, zy, wy,
-              xz, yz, zz, wz,
-              xw, yw, zw, ww;
-    };
-} MtxF;
+typedef float MtxF[4][4];
+typedef float mf[4][4];
 
 #endif

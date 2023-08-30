@@ -17,4 +17,6 @@ extern controller_struct controllers[4];
 extern controller_struct controller_player;
 extern controller_struct controller_player_previous_frame;
 
+extern void controller_readData();
+
 #endif

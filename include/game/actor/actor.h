@@ -21,4 +21,6 @@ typedef union {
     Actor* actor;
 } map_object_actor_collision_union;
 
+extern void actor_model_set_pos(void* actor, model_info* actor_model);
+
 #endif
