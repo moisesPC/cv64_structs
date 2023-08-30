@@ -13,6 +13,7 @@ module_create = 0x800018ac;
 module_createAndSetChild = 0x80001980;
 goToNextFunc = 0x80001448;
 goToFunc = 0x80001590;
+func_8000E860 = 0x8000E860;
 
 /* unknown_struct.h */
 D_80363AB8 = 0x80363AB8;
@@ -51,3 +52,8 @@ actor_model_set_pos = 0x801681c0;
 
 /* player.h */
 playerIsInsideActorSpawnRadius = 0x8015870c;
+
+/* gamestate.h */
+createGameState = 0x80000460;
+changeGameState = 0x80000510;
+gameState_init  = 0x800005dc;

@@ -56,6 +56,7 @@ typedef struct {
     void* field48_0x858;
 } DMAChunkMgr;
 
+// ID: 0x0004
 typedef struct {
     ModuleHeader header;
     u8 field1_0x20;

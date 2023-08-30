@@ -5,11 +5,14 @@
 #include "camera.h"
 
 enum textbox_flags {
-    SLOW_TEXT_TRANSITION = (1 << 20),
-    FAST_TEXT_TRANSITION = (1 << 21),
-    CLOSE_TEXTBOX        = (1 << 26),
-    OPEN_TEXTBOX         = (1 << 27),
-    TEXTBOX_IS_ACTIVE    = (1 << 30)
+    MENU_TEXT_ID_PRINTS_ITEM        = (1 << 0),
+    MENU_TEXT_ID_PRINTS_MENU_STRING = (1 << 1),
+    PRINT_NUMBER                    = (1 << 4),
+    SLOW_TEXT_TRANSITION            = (1 << 20),
+    FAST_TEXT_TRANSITION            = (1 << 21),
+    CLOSE_TEXTBOX                   = (1 << 26),
+    OPEN_TEXTBOX                    = (1 << 27),
+    TEXTBOX_IS_ACTIVE               = (1 << 30)
 };
 
 // TODO: Fill this
@@ -69,7 +72,7 @@ typedef struct {
     u8 field10_0x21;
     u8 field11_0x22;
     u8 field12_0x23;
-    f32 textbox_frame_closing_speed;
+    f32 frame_closing_speed;
     u8 field14_0x28;
     u8 field15_0x29;
     u8 field16_0x2a;
@@ -159,7 +162,7 @@ typedef struct {
 typedef struct {
     u32 flags;
     camera* display_camera;                 // The camera that displays the text
-    u16* text;                              // Officially knwon as "str1"
+    u16* text;                              // Officially known as "str1"
     s32 field3_0xc;
     s32 field4_0x10;
     vec2s position;
@@ -175,7 +178,7 @@ typedef struct {
     u8 character_spacing;
     u8 field16_0x33;
     u8 color_palette;
-    u8 menu_text_ID;                        // ID in the (pause only?) menu text pool that starts at 0x8016ceb8
+    u8 menu_text_ID;                        // ID in the text pool that starts at 0x8016ceb8. Appears to be used for item names in the pause menu too?
     u8 field19_0x36;
     u8 field20_0x37;
     u8 field21_0x38;

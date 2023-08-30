@@ -32,6 +32,7 @@ extern void* module_create(void* parent, s32 ID);
 extern void* module_createAndSetChild(void* parent, s32 ID);
 extern void goToNextFunc(u16 current_functionInfo[], s16* functionInfo_ID);
 extern void goToFunc(u16 current_functionInfo[], s16* functionInfo_ID, s32 function);
+extern void func_8000E860(ModuleHeader* self);
 
 // Mostly used inside entrypoint functions
 // Commas at the end of statements needed for matching

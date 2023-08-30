@@ -1,6 +1,8 @@
 #ifndef GAME_STATE_H
 #define GAME_STATE_H
 
+#include <ultra64.h>
+
 enum gameState_ID {
     KONAMI_LOGO = 1,
     GAMEPLAY = 2,
@@ -14,5 +16,9 @@ enum gameState_ID {
     GAMENOTE_DELETE = 10,
     CREDITS = 11
 };
+
+extern void createGameState(u32 game_state);
+extern void changeGameState(u32 game_state);
+extern void gameState_init();
 
 #endif
