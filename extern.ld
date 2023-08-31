@@ -1,6 +1,9 @@
 /* model_info.h */
 modelInfo_setPosVec3s = 0x80009330;
 modelInfo_createRootNode = 0x80004e68;
+modelInfo_createNextNode = 0x80004ef4;
+modelInfo_showModelAndItsChildren = 0x8000496c;
+modelInfo_hideModelAndItsChildren = 0x80004838;
 
 /* color.h */
 background_color = 0x80387ac8;
@@ -16,7 +19,12 @@ module_create = 0x800018ac;
 module_createAndSetChild = 0x80001980;
 goToNextFunc = 0x80001448;
 goToFunc = 0x80001590;
+module_allocEntryInList = 0x8000219C;
 func_8000E860 = 0x8000E860;
+
+/* memory.h */
+malloc = 0x80000d80;
+allocatedBlock_resetFlags = 0x80001078;
 
 /* unknown_struct.h */
 D_80363AB8 = 0x80363AB8;
@@ -32,6 +40,7 @@ textbox_setPos = 0x8012ccfc;
 textbox_setMessagePtr = 0x8012cd38;
 textbox_8012cda4 = 0x8012CDA4;
 text_getMessageFromPool = 0x8012ce7c;
+text_convertIntNumberToText = 0x8012d6f4;
 
 /* camera.h */
 common_cameras_array = 0x8009b430;
@@ -64,3 +73,12 @@ gameState_init  = 0x800005dc;
 /* konamiLogo.h */
 KONAMI_LOGO_DL = 0x0600C650;
 KCEK_LOGO_DL   = 0x06015CA0;
+
+/* HUD.h */
+HUD_updateClockMarkersAngle = 0x80138c54;
+HUD_updateGameplayHUDPos = 0x80138fac;
+HUD_updateClockDayNightGraphic = 0x80138d20;
+HUD_updateClockDisplay = 0x80138b68;
+HUD_updateHealthBar = 0x80138224;
+HUD_updateSubweaponGraphic = 0x801386ac;
+HUD_updateBossBar = 0x801386e0;

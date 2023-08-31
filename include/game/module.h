@@ -33,6 +33,7 @@ extern void* module_create(void* parent, s32 ID);
 extern void* module_createAndSetChild(void* parent, s32 ID);
 extern void goToNextFunc(u16 current_functionInfo[], s16* functionInfo_ID);
 extern void goToFunc(u16 current_functionInfo[], s16* functionInfo_ID, s32 function);
+extern void module_allocEntryInList(ModuleHeader* module, s32 allocatedBlockInfo_index, u32 size, u32 ptrs_array_index);
 extern void func_8000E860(ModuleHeader* self);
 
 // Mostly used inside entrypoint functions

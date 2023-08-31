@@ -154,7 +154,7 @@ typedef struct {
     u8 field31_0x2b;
     u8 field32_0x2c;
     u8 field33_0x2d;
-    u8 field34_0x2e;
+    u8 display_time;
     u8 field35_0x2f;
     mfds_color_animation_state* color_anim_state;
 } mfds_work;
@@ -216,6 +216,7 @@ extern void textbox_setDimensions(mfds_state* this, s8 height, s16 width, u8 par
 extern void textbox_setPos(mfds_state* this, u16 text_X_pos, u16 text_Y_pos, s32 unused);      // 0x8012ccfc
 extern void textbox_setMessagePtr(mfds_state* this, u16* text, s32 param_3, s16 param_4);      // 0x8012cd38
 extern void textbox_8012cda4(mfds_state* this, u32 param_2, f32 closing_speed);                // 0x8012cda4
-extern void* text_getMessageFromPool(u16* message_pool_base_ptr, s32 id);                   // 0x8012ce7c
+extern void* text_getMessageFromPool(u16* message_pool_base_ptr, s32 id);                      // 0x8012ce7c
+extern void text_convertIntNumberToText(u32, u16*, u8, u32);
 
 #endif

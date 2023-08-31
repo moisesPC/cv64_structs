@@ -39,6 +39,9 @@ typedef struct {
 } model_info;
 
 extern void modelInfo_setPosVec3s(model_info* self, vec3s* position);
-extern model_info* modelInfo_createRootNode(u32, void*);
+extern model_info* modelInfo_createRootNode(u32 type, void* parent);
+extern model_info* modelInfo_createNextNode(u32 parent_type, void* parent);
+extern void modelInfo_showModelAndItsChildren(model_info*, u16);
+extern void modelInfo_hideModelAndItsChildren(model_info*, u16);
 
 #endif
