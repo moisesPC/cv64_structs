@@ -2,8 +2,8 @@
 #define ACTOR_H
 
 #include "module.h"
-#include "model_info.h"
-#include "actor_settings.h"
+#include "gfx/model_info.h"
+#include "actor/actor_settings.h"
 #include <ultra64.h>
 
 // Generic actor struct

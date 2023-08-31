@@ -2,7 +2,7 @@
 #define TEXTBOX_MODULE_H
 
 #include "module.h"
-#include "textboxAdvanceArrow.h"
+#include "menus/textbox/textboxAdvanceArrow.h"
 #include "textbox.h"
 #include <gbi.h>
 

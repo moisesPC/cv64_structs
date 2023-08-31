@@ -2,6 +2,9 @@
 modelInfo_setPosVec3s = 0x80009330;
 modelInfo_createRootNode = 0x80004e68;
 
+/* color.h */
+background_color = 0x80387ac8;
+
 /* controller.h */
 controllers = 0x80387d7c;
 controller_player = 0x800d79b0;
@@ -57,3 +60,7 @@ playerIsInsideActorSpawnRadius = 0x8015870c;
 createGameState = 0x80000460;
 changeGameState = 0x80000510;
 gameState_init  = 0x800005dc;
+
+/* konamiLogo.h */
+KONAMI_LOGO_DL = 0x0600C650;
+KCEK_LOGO_DL   = 0x06015CA0;

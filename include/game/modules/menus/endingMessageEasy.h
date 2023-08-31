@@ -5,19 +5,20 @@
 #include "textbox.h"
 #include <ultra64.h>
 
+// ID: 0x2140
 typedef struct {
     ModuleHeader header;
     u8 field_0x20[28];
-    textbox* ending_textbox;
+    mfds_state* ending_textbox;
     u32 active_time;
     u8 field_0x44[48];
 } endingMessageEasy;
 
-void endingMessageEasy_calc(endingMessageEasy* this);                // 0x0F000000
-void endingMessageEasy_init(endingMessageEasy* this);                // 0x0F000070
-void func_0F00018C();                                                // 0x0F00018C
-void endingMessageEasy_loop(endingMessageEasy* this);                // 0x0F000194
-void endingMessageEasy_destroy(endingMessageEasy* this);             // 0x0F0002E0
+void endingMessageEasy_entrypoint(endingMessageEasy* self);               // 0x0F000000
+void endingMessageEasy_init(endingMessageEasy* self);                     // 0x0F000070
+void func_0F00018C();                                                     // 0x0F00018C
+void endingMessageEasy_loop(endingMessageEasy* self);                     // 0x0F000194
+void endingMessageEasy_destroy(endingMessageEasy* self);                  // 0x0F0002E0
 
 // 0x0F000350
 /*
@@ -47,7 +48,7 @@ u16 ending_text[120] = {
 };
 
 // 0x0F000440
-void (*endingMessageEasy_functions[3])(endingMessageEasy* this) = 
+void (*endingMessageEasy_functions[])(endingMessageEasy* self) = 
 {
     endingMessageEasy_init,
     endingMessageEasy_loop,

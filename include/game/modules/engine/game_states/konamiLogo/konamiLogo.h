@@ -2,7 +2,7 @@
 #define KONAMI_LOGO_H
 
 #include "module.h"
-#include "model_info.h"
+#include "gfx/model_info.h"
 
 // ID: 0x000E
 typedef struct {
@@ -49,5 +49,10 @@ const f32 Konami_logo_size_X = 0.9975f;
 const f32 Konami_logo_size_Y = 1.005f;
 const f32 KCEK_logo_size_X   = 0.995f;
 const f32 KCEK_logo_size_Y   = 0.995f;
+
+// These variables need to be extern'd,
+// otherwise the code will vary slightly and won't match.
+extern const u32 KONAMI_LOGO_DL;
+extern const u32 KCEK_LOGO_DL;
 
 #endif

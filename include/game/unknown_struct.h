@@ -2,19 +2,21 @@
 #define UNKNOWN_STRUCT_H
 
 #include "controller.h"
-#include "saveFile.h"
-#include "color.h"
+#include "save.h"
+#include "gfx/color.h"
 #include <ultra64.h>
 
 typedef struct {
-    u8 unk1[0x42C4];
-    controller_struct controllers[4];        // 80387d7c
-    u8 unk2[0x1E30];
+    u8 unk1[0x4010];
+    color_union background_color;
+    u8 unk2[0x2B0];
+    controller_struct controllers[4];
+    u8 unk3[0x1E30];
     SaveStruct SaveStruct_gameplay;        // 80389be4
-    u8 unk3[0x28];
-    s16 current_PowerUp_level;               // 80389cec
-    u8 unk4[0x18C];
-    s16 field25313_0x63c0;		             // 80389e78
+    u8 unk4[0x28];
+    s16 current_PowerUp_level;             // 80389cec
+    u8 unk5[0x18C];
+    s16 field25313_0x63c0;		           // 80389e78
     u8 field25315_0x63c2;
     u8 field25316_0x63c3;
     u8 field25317_0x63c4;
@@ -119,7 +121,7 @@ typedef struct {
     u8 field25416_0x6427;
     s16 map_ID;	                             // 80389ee0
     s16 map_entrance_ID;
-    color_union map_fade_in_color;	             // 80389ee4
+    color_union map_fade_in_color;	         // 80389ee4
     s16 map_fade_out_time;	                 // 80389ee8
     s16 map_fade_in_time;
     u8 field25429_0x6434;
@@ -139,7 +141,7 @@ typedef struct {
     u8 field25443_0x6442;
     u8 field25444_0x6443;
     s32 field25445_0x6444;	                 // 80389efc
-    u32 cutscene_mode;
+    u32 cutscene_flags;
     s32 field25453_0x644c;			         // 80389f04
     u8 field25457_0x6450;
     u8 field25458_0x6451;

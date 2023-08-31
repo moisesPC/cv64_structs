@@ -3,7 +3,8 @@
 
 #include <ultra64.h>
 
-#define MODULE_SIZE 0x74
+#define MODULE_SIZE        0x74
+#define MODULE_HEADER_SIZE 0x20
 
 enum ModuleHeader_flags {
     PAUSE      = (1 << 14),
@@ -36,12 +37,12 @@ extern void func_8000E860(ModuleHeader* self);
 
 // Mostly used inside entrypoint functions
 // Commas at the end of statements needed for matching
-#define TRANSITION(self, functions_array)                                                  \
+#define ENTER(self, functions_array)                                                       \
     s16 funcID;                                                                            \
     funcID = self->header.functionInfo_ID + 1;                                             \
     self->header.functionInfo_ID = funcID,                                                 \
     self->header.current_function[funcID].timer++;                                         \
-    konamiLogo_functions[self->header.current_function[funcID].function](self);            \
+    functions_array[self->header.current_function[funcID].function](self);                 \
     self->header.functionInfo_ID--;
 
 // functionInfo* curFunc;

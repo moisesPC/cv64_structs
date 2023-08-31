@@ -2,7 +2,7 @@
 #define TEXTBOX_H
 
 #include "math.h"
-#include "camera.h"
+#include "gfx/camera.h"
 
 enum textbox_flags {
     MENU_TEXT_ID_PRINTS_ITEM        = (1 << 0),
@@ -211,11 +211,11 @@ typedef struct {
     void* selection_lens;                       // lens*
 } mfds_state;
 
-extern textbox* textbox_create(void* parent_module, void* param_2, u32 flags);              // 0x8012cb88
-extern void textbox_setDimensions(textbox* this, s8 height, s16 width, u8 param_4, u8 character_spacing);       // 0x8012cd14
-extern void textbox_setPos(textbox* this, u16 text_X_pos, u16 text_Y_pos, s32 unused);      // 0x8012ccfc
-extern void textbox_setMessagePtr(textbox* this, u16* text, s32 param_3, s16 param_4);      // 0x8012cd38
-extern void textbox_8012cda4(textbox* this, u32 param_2, f32 closing_speed);                // 0x8012cda4
+extern mfds_state* textbox_create(void* parent_module, void* param_2, u32 flags);              // 0x8012cb88
+extern void textbox_setDimensions(mfds_state* this, s8 height, s16 width, u8 param_4, u8 character_spacing);       // 0x8012cd14
+extern void textbox_setPos(mfds_state* this, u16 text_X_pos, u16 text_Y_pos, s32 unused);      // 0x8012ccfc
+extern void textbox_setMessagePtr(mfds_state* this, u16* text, s32 param_3, s16 param_4);      // 0x8012cd38
+extern void textbox_8012cda4(mfds_state* this, u32 param_2, f32 closing_speed);                // 0x8012cda4
 extern void* text_getMessageFromPool(u16* message_pool_base_ptr, s32 id);                   // 0x8012ce7c
 
 #endif

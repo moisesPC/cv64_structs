@@ -3,11 +3,12 @@
 
 #include "module.h"
 
+// ID: 0x20A4
 typedef struct {
     ModuleHeader header;
-    u8 field_0x20[0x54];
+    u8 field_0x20[MODULE_SIZE - MODULE_HEADER_SIZE];
 } moduleA4;
 
-void moduleA4_calc(moduleA4* this);    // 0x0F000070
+void moduleA4_entrypoint(moduleA4* self);    // 0x0F000000
 
 #endif

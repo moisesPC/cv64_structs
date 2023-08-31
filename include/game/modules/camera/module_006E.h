@@ -3,6 +3,7 @@
 
 #include <ultra64.h>
 
+// ID: 0x006E
 // TODO: Fill this
 typedef struct {
     u8 field_0x[MODULE_SIZE];

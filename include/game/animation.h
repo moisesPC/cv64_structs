@@ -1,7 +1,7 @@
 #ifndef ANIMATION_H
 #define ANIMATION_H
 
-#include "model_info.h"
+#include "gfx/model_info.h"
 #include <ultra64.h>
 
 typedef struct {

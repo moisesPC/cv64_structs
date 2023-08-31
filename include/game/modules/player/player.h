@@ -1,14 +1,14 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "player_flags.h"
+#include "players/player_flags.h"
 #include "math.h"
-#include "model_info.h"
+#include "gfx/model_info.h"
 #include "atari_work.h"
 #include "animation.h"
-#include "module_006E.h"
-#include "attackMgr.h"
-#include "actor.h"
+#include "camera/module_006E.h"
+#include "player/attackMgr.h"
+#include "actor/actor.h"
 #include <ultra64.h>
 
 typedef struct {

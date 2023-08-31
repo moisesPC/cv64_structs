@@ -2,9 +2,10 @@
 #define CARRIE_H
 
 #include "module.h"
-#include "model_info.h"
-#include "player.h"
+#include "gfx/model_info.h"
+#include "player/player.h"
 
+// ID 0x0074
 typedef struct {
     ModuleHeader header;
     u8 padding1[4];

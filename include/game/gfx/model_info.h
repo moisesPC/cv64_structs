@@ -1,7 +1,8 @@
 #ifndef MODEL_INFO_H
 #define MODEL_INFO_H
 
-#include "color.h"
+#include "gfx/color.h"
+#include "math.h"
 #include <ultra64.h>
 
 typedef struct {

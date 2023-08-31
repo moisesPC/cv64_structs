@@ -1,8 +1,8 @@
 #ifndef PLAYER_COLLISION_INFO_H
 #define PLAYER_COLLISION_INFO_H
 
-#include "collision_triangle.h"
-#include "actor.h"
+#include "collision/collision_triangle.h"
+#include "actor/actor.h"
 #include "math.h"
 #include <ultra64.h>
 
