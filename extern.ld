@@ -41,6 +41,7 @@ textbox_setMessagePtr = 0x8012cd38;
 textbox_8012cda4 = 0x8012CDA4;
 text_getMessageFromPool = 0x8012ce7c;
 text_convertIntNumberToText = 0x8012d6f4;
+text_color_anim_data_table = 0x8016d0a0;
 
 /* camera.h */
 common_cameras_array = 0x8009b430;
@@ -61,8 +62,11 @@ DMAMgr_loadNisitenmaIchigoFile = 0x8000f83c;
 
 /* actor.h */
 actor_model_set_pos = 0x801681c0;
+actor_model_set_pos_and_angle = 0x8016823c;
+actor_checkSpawn = 0x801588ec;
 
 /* player.h */
+ptr_playerData = 0x800d7af8;
 playerIsInsideActorSpawnRadius = 0x8015870c;
 
 /* gamestate.h */

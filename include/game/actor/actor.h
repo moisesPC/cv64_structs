@@ -21,6 +21,8 @@ typedef union {
     Actor* actor;
 } map_object_actor_collision_union;
 
-extern void actor_model_set_pos(void* actor, model_info* actor_model);
+extern void actor_model_set_pos(Actor* actor, model_info* actor_model);
+extern void actor_model_set_pos_and_angle(Actor* actor, model_info* actor_model);
+extern s32 actor_checkSpawn(Actor* actor, f32 actor_pos_X, f32 actor_pos_Y, f32 actor_pos_Z);
 
 #endif

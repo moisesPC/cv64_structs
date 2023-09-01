@@ -19,7 +19,7 @@ enum player_flags {
     HEALTH_DRAINING_WHILE_POISONED = 0x00100000,
     SLIDING = 0x00200000,
     STO = 0x00400000,                                            // Unused
-    VAMP = 0x00800000,
+    VAMP = 0x08000000,
     POISON = 0x10000000,
     TIRED = 0x20000000,
     DAMAGED_AT_LEAST_ONCE = 0x40000000,

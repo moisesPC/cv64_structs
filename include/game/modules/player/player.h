@@ -218,6 +218,7 @@ enum axis_enum {
     XYZ = 8
 };
 
+extern playerData* ptr_playerData;
 extern u32 playerIsInsideActorSpawnRadius(model_info* player_model, model_info* actor_model, f32 actor_spawn_radius, u32 axis);
 
 #endif

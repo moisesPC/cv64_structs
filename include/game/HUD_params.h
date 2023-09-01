@@ -34,7 +34,7 @@ typedef struct {
     s16* boss_current_life;
     s16 boss_bar_health_max;
     s16 boss_bar_health_left;
-    s16 field17_0x20;
+    s16 boss_bar_damage;
     u8 field18_0x22;
     u8 field19_0x23;
     f32 boss_bar_damage_length;

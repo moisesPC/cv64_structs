@@ -22,40 +22,17 @@ typedef struct {
 
 typedef struct {
     u16 color;
-    u16 time;
-} struct_12;
+    u16 max_transition_time;
+} text_color_anim_data;
 
 typedef struct {
-    u8 field0_0x0;
-    u8 field1_0x1;
-    u8 transition_time;
-    u8 field3_0x3;
-    u8 field4_0x4;
-    u8 field5_0x5;
-    u8 field6_0x6;
-    u8 field7_0x7;
-    u8 field8_0x8;
-    u8 transition_point;
-    u8 field10_0xa;
-    u8 field11_0xb;
-    u8 field12_0xc;
-    u8 field13_0xd;
-    u8 field14_0xe;
-    u8 field15_0xf;
-    struct_12* field16_0x10;
-    void* field17_0x14;
-    u8 field18_0x18;
-    u8 field19_0x19;
-    u8 field20_0x1a;
-    u8 field21_0x1b;
-    u8 field22_0x1c;
-    u8 field23_0x1d;
-    u8 field24_0x1e;
-    u8 field25_0x1f;
-    u8 max_transition_time;
-    u8 field27_0x21;
-    u8 field28_0x22;
-    u8 field29_0x23;
+    u8 field_0x00;
+    u8 transition_time[4];
+    u8 field_0x05[4];
+    u8 transition_point[4];
+    u8 field_0x0D[3];                           // Probably padding
+    text_color_anim_data* color_anim_data[4];
+    u8 max_transition_time[4];
 } mfds_color_animation_state;
 
 typedef struct {
@@ -218,5 +195,6 @@ extern void textbox_setMessagePtr(mfds_state* this, u16* text, s32 param_3, s16 
 extern void textbox_8012cda4(mfds_state* this, u32 param_2, f32 closing_speed);                // 0x8012cda4
 extern void* text_getMessageFromPool(u16* message_pool_base_ptr, s32 id);                      // 0x8012ce7c
 extern void text_convertIntNumberToText(u32, u16*, u8, u32);
+extern text_color_anim_data text_color_anim_data_table[4][8];
 
 #endif
