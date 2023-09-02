@@ -10,6 +10,7 @@ enum textbox_flags {
     PRINT_NUMBER                    = (1 << 4),
     SLOW_TEXT_TRANSITION            = (1 << 20),
     FAST_TEXT_TRANSITION            = (1 << 21),
+    UPDATE_STRING                   = (1 << 24),
     CLOSE_TEXTBOX                   = (1 << 26),
     OPEN_TEXTBOX                    = (1 << 27),
     TEXTBOX_IS_ACTIVE               = (1 << 30)
@@ -37,7 +38,7 @@ typedef struct {
 
 typedef struct {
     u32 field0_0x0;
-    camera* field1_0x4;
+    camera* display_camera;
     vec3f field2_0x8;
     f32 width;
     f32 field4_0x18;
@@ -49,7 +50,7 @@ typedef struct {
     u8 field10_0x21;
     u8 field11_0x22;
     u8 field12_0x23;
-    f32 frame_closing_speed;
+    f32 closing_speed;
     u8 field14_0x28;
     u8 field15_0x29;
     u8 field16_0x2a;
@@ -140,7 +141,7 @@ typedef struct {
     u32 flags;
     camera* display_camera;                 // The camera that displays the text
     u16* text;                              // Officially known as "str1"
-    s32 field3_0xc;
+    u16* item_amount_number_text;
     s32 field4_0x10;
     vec2s position;
     f32 position_Z;
@@ -160,7 +161,7 @@ typedef struct {
     u8 field20_0x37;
     u8 field21_0x38;
     u8 field22_0x39;
-    u8 number_of_chars_to_be_displayed;
+    u8 number_of_chars;
     u8 display_time;
     s8 field25_0x3c;
     u8 field26_0x3d;
@@ -193,8 +194,10 @@ extern void textbox_setDimensions(mfds_state* this, s8 height, s16 width, u8 par
 extern void textbox_setPos(mfds_state* this, u16 text_X_pos, u16 text_Y_pos, s32 unused);      // 0x8012ccfc
 extern void textbox_setMessagePtr(mfds_state* this, u16* text, s32 param_3, s16 param_4);      // 0x8012cd38
 extern void textbox_8012cda4(mfds_state* this, u32 param_2, f32 closing_speed);                // 0x8012cda4
+extern void textbox_printNumber(mfds_state*, u8, u32 number);
 extern void* text_getMessageFromPool(u16* message_pool_base_ptr, s32 id);                      // 0x8012ce7c
 extern void text_convertIntNumberToText(u32, u16*, u8, u32);
+extern u16* text_findCharInString(u16* text, u16 char_to_find);
 extern text_color_anim_data text_color_anim_data_table[4][8];
 
 #endif
