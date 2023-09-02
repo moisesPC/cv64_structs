@@ -2,6 +2,7 @@
 #define TEXTBOX_ADVANCE_ARROW_H
 
 #include "module.h"
+#include "gfx/struct_47.h"
 
 // ID: 0x2138
 typedef struct {
@@ -11,7 +12,7 @@ typedef struct {
     u8 field3_0x22;
     u8 field4_0x23;
     model_info* model;
-    void* field6_0x28;         // struct_47*
+    struct_47* field6_0x28;         // struct_47*
     u8 field7_0x2c;
     u8 field8_0x2d;
     u8 field9_0x2e;
@@ -24,7 +25,7 @@ typedef struct {
     u8 field16_0x35;
     u8 field17_0x36;
     u8 field18_0x37;
-    s32 fade_timer;
+    u32 fade_timer;
     u8 field20_0x3c;
     u8 field21_0x3d;
     u8 field22_0x3e;
@@ -53,7 +54,7 @@ typedef struct {
     u8 field45_0x55;
     u8 field46_0x56;
     u8 field47_0x57;
-    s32 disable_arrow;
+    u32 disable_arrow;
     u8 field49_0x5c;
     u8 field50_0x5d;
     u8 field51_0x5e;
@@ -79,5 +80,18 @@ typedef struct {
     u8 field71_0x72;
     u8 field72_0x73;
 } textboxAdvanceArrow;
+
+void textboxAdvanceArrow_entrypoint(textboxAdvanceArrow* self);     // 0x0F000000
+void textboxAdvanceArrow_init(textboxAdvanceArrow* self);           // 0x0F000070
+void textboxAdvanceArrow_loop(textboxAdvanceArrow* self);           // 0x0F000190
+void textboxAdvanceArrow_destroy(textboxAdvanceArrow* self);        // 0x0F00037C
+
+// 0x0F0003A0
+void (*textboxAdvanceArrow_functions[])(textboxAdvanceArrow* self) = 
+{
+    textboxAdvanceArrow_init,
+    textboxAdvanceArrow_destroy,
+    textboxAdvanceArrow_destroy
+};
 
 #endif

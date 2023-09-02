@@ -5,6 +5,10 @@ modelInfo_createNextNode = 0x80004ef4;
 modelInfo_showModelAndItsChildren = 0x8000496c;
 modelInfo_hideModelAndItsChildren = 0x80004838;
 
+/* struct_47.h */
+func_80004C40 = 0x80004C40;
+func_80004CE8 = 0x80004CE8;
+
 /* color.h */
 background_color = 0x80387ac8;
 
