@@ -1,7 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "players/player_flags.h"
+#include "player/player_flags.h"
 #include "math.h"
 #include "gfx/model_info.h"
 #include "atari_work.h"
