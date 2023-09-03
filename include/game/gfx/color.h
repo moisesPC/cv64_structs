@@ -15,9 +15,4 @@ typedef union {
     Color8 color_u8;
 } color_union;
 
-// This is part of of D_80383AB8,
-// but for some reason some code accesses this variable
-// directly, without having to reference D_80383AB8 first
-extern color_union background_color;
-
 #endif

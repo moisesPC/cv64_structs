@@ -9,9 +9,6 @@ modelInfo_hideModelAndItsChildren = 0x80004838;
 func_80004C40 = 0x80004C40;
 func_80004CE8 = 0x80004CE8;
 
-/* color.h */
-background_color = 0x80387ac8;
-
 /* controller.h */
 controllers = 0x80387d7c;
 controller_player = 0x800d79b0;

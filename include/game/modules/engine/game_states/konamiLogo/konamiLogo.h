@@ -45,11 +45,6 @@ void (*konamiLogo_functions[])(konamiLogo* self) =
     func_8000E860
 };
 
-const f32 Konami_logo_size_X = 0.9975f;
-const f32 Konami_logo_size_Y = 1.005f;
-const f32 KCEK_logo_size_X   = 0.995f;
-const f32 KCEK_logo_size_Y   = 0.995f;
-
 // These variables need to be extern'd,
 // otherwise the code will vary slightly and won't match.
 extern const u32 KONAMI_LOGO_DL;
