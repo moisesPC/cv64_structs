@@ -49,6 +49,9 @@ text_convertIntNumberToText = 0x8012d6f4;
 text_color_anim_data_table = 0x8016d0a0;
 text_findCharInString = 0x80132404;
 
+/* textboxAdvanceArrow.h */
+TEXTBOX_ARROW_DLIST = 0x06001120;
+
 /* camera.h */
 common_cameras_array = 0x8009b430;
 

@@ -94,4 +94,6 @@ void (*textboxAdvanceArrow_functions[])(textboxAdvanceArrow* self) =
     textboxAdvanceArrow_destroy
 };
 
+extern const u32 TEXTBOX_ARROW_DLIST;
+
 #endif
