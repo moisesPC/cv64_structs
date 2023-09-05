@@ -6,7 +6,7 @@
 #define MODULE_SIZE        0x74
 #define MODULE_HEADER_SIZE 0x20
 
-enum ModuleHeader_flags {
+enum module_execution_flags {
     PAUSE      = (1 << 14),
     TOP        = (1 << 15)
 };
@@ -34,6 +34,7 @@ extern void* module_createAndSetChild(void* parent, s32 ID);
 extern void goToNextFunc(u16 current_functionInfo[], s16* functionInfo_ID);
 extern void goToFunc(u16 current_functionInfo[], s16* functionInfo_ID, s32 function);
 extern void module_allocEntryInList(ModuleHeader* module, s32 allocatedBlockInfo_index, u32 size, u32 ptrs_array_index);
+extern void* moduleList_findFirstModuleByID(u16 ID);
 extern void func_8000E860(ModuleHeader* self);
 
 // Mostly used inside entrypoint functions

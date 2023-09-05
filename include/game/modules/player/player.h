@@ -136,7 +136,7 @@ typedef struct {
     attackManager* attackMgr;
     struct_7* field_0x8C;
     u8 unable_to_jump_timer;
-    u8 field_0x91;
+    u8 unable_to_throw_subweapon_timer;
     u8 field_0x92;
     u8 field_0x93;
     map_object_actor_collision_union field_0x94;

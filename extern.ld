@@ -21,6 +21,7 @@ module_createAndSetChild = 0x80001980;
 goToNextFunc = 0x80001448;
 goToFunc = 0x80001590;
 module_allocEntryInList = 0x8000219C;
+moduleList_findFirstModuleByID = 0x80001ad0;
 func_8000E860 = 0x8000E860;
 
 /* memory.h */
@@ -92,3 +93,12 @@ HUD_updateClockDisplay = 0x80138b68;
 HUD_updateHealthBar = 0x80138224;
 HUD_updateSubweaponGraphic = 0x801386ac;
 HUD_updateBossBar = 0x801386e0;
+
+/* fade.h */
+fade_setAllFlags = 0x8000e590;
+fade_setFlag = 0x8000e5a8;
+fade_removeFlag = 0x8000e5cc;
+fade_setColor = 0x8000e5f4;
+fade_setSettings = 0x8000e618;
+fade_isFading = 0x8000e67c;
+fade_calc = 0x8000e6c4;

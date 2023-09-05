@@ -6,12 +6,19 @@
 #include "gfx/color.h"
 #include <ultra64.h>
 
+#define NISITENMA_ICHIGO_FILES_COUNT_MAX 255
+
 typedef struct {
     u8 unk1[0x4010];
     color_union background_color;
     u8 unk2[0x2B0];
     controller_struct controllers[4];
-    u8 unk3[0x1E30];
+    u8 file_load_array_ID;
+    u8 field_80387db5[3];
+    void* Nisitenma_Ichigo_loaded_files_ptr[NISITENMA_ICHIGO_FILES_COUNT_MAX];
+    u8 field_803881b4[4];
+    void* file_load_array[8];              // fileLoad*
+    u8 unk3[0x1A0C];
     SaveStruct SaveStruct_gameplay;        // 80389be4
     u8 unk4[0x28];
     s16 current_PowerUp_level;             // 80389cec
@@ -124,23 +131,11 @@ typedef struct {
     color_union map_fade_in_color;	         // 80389ee4
     s16 map_fade_out_time;	                 // 80389ee8
     s16 map_fade_in_time;
-    u8 field25429_0x6434;
-    u8 field25430_0x6435;
-    u8 field25431_0x6436;
-    u8 field25432_0x6437;
-    u8 field25433_0x6438;
-    u8 field25434_0x6439;
-    u8 field25435_0x643a;
-    u8 field25436_0x643b;
-    u8 field25437_0x643c;
-    u8 field25438_0x643d;
-    u8 field25439_0x643e;
-    u8 field25440_0x643f;
-    u8 field25441_0x6440;
-    u8 field25442_0x6441;
-    u8 field25443_0x6442;
-    u8 field25444_0x6443;
-    s32 field25445_0x6444;	                 // 80389efc
+    u16 field25429_0x6434;
+    u16 current_opened_menu;
+    u8 field25433_0x6438[4];
+    s32 cutscene_ID;
+    s32 entrance_cutscene_ID;	             // 80389efc
     u32 cutscene_flags;
     s32 field25453_0x644c;			         // 80389f04
     u8 field25457_0x6450;
