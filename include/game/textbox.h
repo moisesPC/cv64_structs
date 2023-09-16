@@ -8,6 +8,7 @@ enum textbox_flags {
     MENU_TEXT_ID_PRINTS_ITEM        = (1 << 0),
     MENU_TEXT_ID_PRINTS_MENU_STRING = (1 << 1),
     PRINT_NUMBER                    = (1 << 4),
+    ALLOC_TEXTBOX_IN_MENU_DATA_HEAP = (1 << 14),
     SLOW_TEXT_TRANSITION            = (1 << 20),
     FAST_TEXT_TRANSITION            = (1 << 21),
     UPDATE_STRING                   = (1 << 24),

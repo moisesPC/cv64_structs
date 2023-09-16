@@ -25,8 +25,15 @@ moduleList_findFirstModuleByID = 0x80001ad0;
 func_8000E860 = 0x8000E860;
 
 /* memory.h */
-malloc = 0x80000d80;
-allocatedBlock_resetFlags = 0x80001078;
+heaps = 0x80271000;
+heap_init = 0x80000c28;
+heap_free = 0x80000c78;
+heap_writebackDCache = 0x80000c94;
+initHeaps = 0x80000cf4;
+heap_alloc = 0x80000d80;
+heap_allocWithAlignment = 0x80000e58;
+heapBlock_updateBlockMaxSize = 0x80000fb4;
+heapBlock_free = 0x80001078;
 
 /* unknown_struct.h */
 D_80363AB8 = 0x80363AB8;
