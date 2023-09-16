@@ -26,6 +26,8 @@ func_8000E860 = 0x8000E860;
 
 /* memory.h */
 heaps = 0x80271000;
+HEAP_MULTIPURPOSE_START = 0x80271060;
+HEAP_MENU_DATA_START = 0x801CC000;
 heap_init = 0x80000c28;
 heap_free = 0x80000c78;
 heap_writebackDCache = 0x80000c94;
@@ -82,6 +84,7 @@ actor_checkSpawn = 0x801588ec;
 /* player.h */
 ptr_playerData = 0x800d7af8;
 playerIsInsideActorSpawnRadius = 0x8015870c;
+Player_calcPhysics = 0x80023d88;
 
 /* gamestate.h */
 createGameState = 0x80000460;
@@ -109,3 +112,8 @@ fade_setColor = 0x8000e5f4;
 fade_setSettings = 0x8000e618;
 fade_isFading = 0x8000e67c;
 fade_calc = 0x8000e6c4;
+
+/* playerCollisionInfo.h */
+playerCollFloor = 0x800d7b58;
+playerCollWall = 0x800d7ba0;
+playerCollCeiling = 0x800d7bd0;

@@ -9,6 +9,7 @@
 #include "camera/module_006E.h"
 #include "player/attackMgr.h"
 #include "actor/actor.h"
+#include "collision/playerCollisionInfo.h"
 #include <ultra64.h>
 
 typedef struct {
@@ -220,5 +221,6 @@ enum axis_enum {
 
 extern playerData* ptr_playerData;
 extern u32 playerIsInsideActorSpawnRadius(model_info* player_model, model_info* actor_model, f32 actor_spawn_radius, u32 axis);
+extern void Player_calcPhysics(void* player, playerCollisionInfoFloor* floorInfo, playerCollisionInfoWall* wallInfo, playerCollisionInfoCeiling* ceilingInfo);
 
 #endif

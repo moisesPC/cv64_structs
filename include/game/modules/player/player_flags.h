@@ -16,7 +16,7 @@ enum player_flags {
     AIRBORNE = 0x00004000,
     JUMP_UP = 0x00008000,
     JUMPING = 0x00010000,
-    HEALTH_DRAINING_WHILE_POISONED = 0x00100000,
+    SLOW_DOWN = 0x00100000,                                      // See 0x80024158
     SLIDING = 0x00200000,
     STO = 0x00400000,                                            // Unused
     VAMP = 0x08000000,

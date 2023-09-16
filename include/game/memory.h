@@ -3,6 +3,9 @@
 
 #include <ultra64.h>
 
+#define HEAP_MULTIPURPOSE_SIZE 0xD0000
+#define HEAP_MENU_DATA_SIZE    0x40000
+
 enum heap_kind {
     HEAP_KIND_MULTIPURPOSE,     // Most dynamically-allocated data is allocated on this heap
     HEAP_KIND_1,
@@ -44,14 +47,16 @@ typedef struct {
 } heapInfo;
 
 extern heapInfo heaps[8];
+extern void* HEAP_MULTIPURPOSE_START;
+extern void* HEAP_MENU_DATA_START;
 
-extern void heap_init(s32 kind, heapBlockHeader* first_block_ptr, s32 heap_size, u16 flags);
+extern void heap_init(s32 kind, heapBlockHeader* first_block_ptr, s32 heap_size, u16 additional_flags);
 extern void heap_free(s32 kind);
 extern void heap_writebackDCache();
 extern void initHeaps();
 extern void* heap_alloc(s32 kind, u32 data_size);   // CV64's malloc()
 extern void* heap_allocWithAlignment(s32 kind, u32 data_size, u32 alignment);
-extern s32 heapBlock_updateBlockMaxSize(u32* data, u32 data_size);
+extern s32 heapBlock_updateBlockMaxSize(void* data, u32 data_size);
 extern void heapBlock_free(void* ptr);              // CV64's free()
 
 #endif
