@@ -66,6 +66,7 @@ common_cameras_array = 0x8009b430;
 atari_work_table_init = 0x80040570;
 atariBaseWork_create = 0x800405c4;
 atariDataWork_create = 0x800406c8;
+atariOnlyWork_create = 0x800407c8;
 atariBaseWork_attachCollider = 0x800408e8;
 
 /* sound.h */
@@ -83,7 +84,7 @@ actor_checkSpawn = 0x801588ec;
 
 /* player.h */
 ptr_playerData = 0x800d7af8;
-playerIsInsideActorSpawnRadius = 0x8015870c;
+checkIfOutsideEntityIsInsideMainEntityRadius = 0x8015870c;
 Player_calcPhysics = 0x80023d88;
 
 /* gamestate.h */

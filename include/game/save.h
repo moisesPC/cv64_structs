@@ -60,7 +60,7 @@ typedef struct {
     u8 field41_0xa1;
     u8 field42_0xa2;
     u8 field43_0xa3;
-    u32 player_flags;
+    u32 player_status;
     u16 health_depletion_rate_while_poisoned;
     u16 current_hour_VAMP;                      // If greater than 24, you turn into vampire
     s16 map_ID;

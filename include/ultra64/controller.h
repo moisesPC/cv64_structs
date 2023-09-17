@@ -110,6 +110,7 @@
 #define BTN_CUP         0x0008
 #define BTN_R           0x0010
 #define BTN_L           0x0020
+#define BTN_RECENTER    0x0080      // https://youtu.be/0XfTdp3s2AQ?t=27
 #define BTN_DRIGHT      0x0100
 #define BTN_DLEFT       0x0200
 #define BTN_DDOWN       0x0400
@@ -118,7 +119,6 @@
 #define BTN_Z           0x2000
 #define BTN_B           0x4000
 #define BTN_A           0x8000
-#define RECENTER_BUTTON 0x1080
 
 typedef union {
     struct {

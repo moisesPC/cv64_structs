@@ -211,7 +211,7 @@ typedef struct {
     u8 field60_0xa7;
 } struct_28;
 
-// For "axis" argument from playerIsInsideActorSpawnRadius()
+// For "axis" argument from checkIfOutsideEntityIsInsideMainEntityRadius()
 enum axis_enum {
     X =   1,
     Y =   2,
@@ -220,7 +220,7 @@ enum axis_enum {
 };
 
 extern playerData* ptr_playerData;
-extern u32 playerIsInsideActorSpawnRadius(model_info* player_model, model_info* actor_model, f32 actor_spawn_radius, u32 axis);
+extern s32 checkIfOutsideEntityIsInsideMainEntityRadius(model_info* main_entity, model_info* outside_entity, s32 radius, u32 axis);     // Put this in another header
 extern void Player_calcPhysics(void* player, playerCollisionInfoFloor* floorInfo, playerCollisionInfoWall* wallInfo, playerCollisionInfoCeiling* ceilingInfo);
 
 #endif

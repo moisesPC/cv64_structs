@@ -78,9 +78,55 @@ typedef struct {
     u8 field_0x98[4];
 } atari_base_work;
 
+typedef struct {
+    u16 flags;
+    s16 field_0x02;
+    s16 field_0x04;
+    s16 damage_dealt;
+    s16 field_0x08;
+    s16 field_0x0A;
+    u8 field_0x0C;
+    u8 field_0x0D;
+    s16 field_0x0E;
+    vec3f push_back_on_collider_contact;
+    atari_data_work* collider_hit;
+    vec3f damage_SFX_position;
+    vec3f field_0x2C;
+    f32 field_0x38;
+    f32 field_0x3C;
+    s16 field_0x40;
+    s16 field_0x42;
+    s16 field_0x44;
+    s16 damage_received;
+    s16 field_0x48;
+    u8 field_0x4A;
+    u8 field_0x4B;
+    u8 field_0x4C;
+    u8 field_0x4D;
+    s16 angle;
+    s16 field_0x50;
+    s16 field_0x52;
+    vec3f center_point;
+    vec2f size;
+    model_info* field_0x68;
+    u8 field30_0x6C;
+    u8 field31_0x6D;
+    u8 field32_0x6E;
+    u8 field33_0x6F;
+    vec3f position;
+    vec3f field_0x7C;
+    vec3f field_0x88;
+    f32 field_0x94;
+    u8 field_0x98;
+    u8 field_0x99;
+    u8 field_0x9A;
+    u8 field_0x9B;
+} atari_only_work;
+
 extern void atari_work_table_init();
 extern atari_base_work* atariBaseWork_create(model_info* attached_bone);
 extern atari_data_work* atariDataWork_create(model_info* attached_bone, u16 param_2);
+extern atari_only_work* atariOnlyWork_create(model_info* attached_bone, u16 function, u16 param_3);
 extern u32 atariBaseWork_attachCollider(atari_base_work* self, atari_data_work* collider, u32 param_3);
 
 #endif
