@@ -19,14 +19,14 @@ enum heap_kind {
 
 // There's also 0x4000, see function 0x80001008
 enum heap_block_flags_enum {
-    FREE   = 0x0000,
-    ACTIVE = 0x8000
+    HEAP_BLOCK_FREE   = 0x0000,
+    HEAP_BLOCK_ACTIVE = 0x8000
 };
 
 enum heap_flags_enum {
-    INACTIVE                = 0x0000,
-    WRITE_BACK_CACHE_TO_RAM = 0x4000,       // Assumption based on function 0x80000C94
-    ACTIVE                  = 0x8000
+    HEAP_INACTIVE                = 0x0000,
+    HEAP_WRITE_BACK_CACHE_TO_RAM = 0x4000,       // Assumption based on function 0x80000C94
+    HEAP_ACTIVE                  = 0x8000
 };
 
 typedef struct {
