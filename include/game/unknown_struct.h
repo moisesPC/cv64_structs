@@ -22,7 +22,9 @@ typedef struct {
     SaveStruct SaveStruct_gameplay;        // 80389be4
     u8 unk4[0x28];
     s16 current_PowerUp_level;             // 80389cec
-    u8 unk5[0x18C];
+    u8 alternate_costume;
+    u8 in_first_person_mode;
+    u8 unk5[0x18A];
     s16 field25313_0x63c0;		           // 80389e78
     u8 field25315_0x63c2;
     u8 field25316_0x63c3;
