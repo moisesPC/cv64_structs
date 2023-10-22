@@ -52,6 +52,7 @@ textbox_setMessagePtr = 0x8012cd38;
 textbox_8012cda4 = 0x8012CDA4;
 textbox_printNumber = 0x8012ce3c;
 text_getMessageFromPool = 0x8012ce7c;
+textbox_setScaleAndSomethingElse = 0x8012cdc8;
 text_convertIntNumberToText = 0x8012d6f4;
 text_color_anim_data_table = 0x8016d0a0;
 text_findCharInString = 0x80132404;

@@ -24,7 +24,7 @@ typedef struct {
     s16 current_PowerUp_level;             // 80389cec
     u8 alternate_costume;
     u8 in_first_person_mode;
-    u8 unk5[0x18A];
+    u8 unk5[0x188];
     s16 field25313_0x63c0;		           // 80389e78
     u8 field25315_0x63c2;
     u8 field25316_0x63c3;

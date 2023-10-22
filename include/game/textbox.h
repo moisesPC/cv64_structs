@@ -197,6 +197,7 @@ extern void textbox_setMessagePtr(mfds_state* self, u16* text, s32 item_amount_n
 extern void textbox_8012cda4(mfds_state* self, u32 param_2, f32 closing_speed);                // 0x8012cda4
 extern void textbox_printNumber(mfds_state*, u8, u32 number);
 extern void* text_getMessageFromPool(u16* message_pool_base_ptr, s32 id);                      // 0x8012ce7c
+extern void textbox_setScaleAndSomethingElse(mfds_state* self, u8 param_2, u8 param_3, f32 position_Z, f32 scale_X, f32 scale_Y, u8 param_7, u8 param_8);
 extern void text_convertIntNumberToText(u32, u16*, u8, u32);
 extern u16* text_findCharInString(u16* text, u16 char_to_find);
 extern text_color_anim_data text_color_anim_data_table[4][8];
