@@ -4,6 +4,9 @@
 #include "map.h"
 #include <ultra64.h>
 
+#define REINHARDT 0
+#define CARRIE    1
+
 enum saveFile_flags {
     GAME_WAS_SAVED_MID_PLAY       = (1 << 0),
     EASY                          = (1 << 4),

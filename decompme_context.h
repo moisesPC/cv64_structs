@@ -1846,7 +1846,6 @@
 #define ICON_unused_0E5_disabled_raster 0x20D00
 #define G_RM_ZB_OPA_DECAL2 RM_ZB_OPA_DECAL(2)
 #define hs_SetHidden HUD_ELEMENT_OP_SetHidden,
-#define CONT_TYPE_MASK 0x1f07
 #define DCACHE_LINESIZE 16
 #define ICON_key_1DC650_raster 0x10340
 #define ICON_food_LimeCandy_palette 0x69A0
@@ -6718,7 +6717,7 @@ typedef struct {
 extern mfds_state* textbox_create(void* parent_module, void* param_2, u32 flags);              // 0x8012cb88
 extern void textbox_setDimensions(mfds_state* self, s8 height, s16 width, u8 param_4, u8 character_spacing);       // 0x8012cd14
 extern void textbox_setPos(mfds_state* self, u16 text_X_pos, u16 text_Y_pos, s32 unused);      // 0x8012ccfc
-extern void textbox_setMessagePtr(mfds_state* self, u16* text, s32 param_3, s16 param_4);      // 0x8012cd38
+extern void textbox_setMessagePtr(mfds_state* self, u16* text, s32 item_amount_number_text, s16 number);      // 0x8012cd38
 extern void textbox_8012cda4(mfds_state* self, u32 param_2, f32 closing_speed);                // 0x8012cda4
 extern void textbox_printNumber(mfds_state*, u8, u32 number);
 extern void* text_getMessageFromPool(u16* message_pool_base_ptr, s32 id);                      // 0x8012ce7c
@@ -7201,8 +7200,7 @@ typedef struct {
     playerVisualData visualData;
     playerParams* params;
     u32 additionalFlags;
-    s16 field_0x4C;
-    s16 field_0x4E;
+    u32 field_0x4C;
     u16 idleTimer;
     s16 field_0x52;
     s16 field_0x54;

@@ -55,6 +55,7 @@ text_getMessageFromPool = 0x8012ce7c;
 text_convertIntNumberToText = 0x8012d6f4;
 text_color_anim_data_table = 0x8016d0a0;
 text_findCharInString = 0x80132404;
+convertUTF16ToCustomTextFormat = 0x8001b3c0;
 
 /* textboxAdvanceArrow.h */
 TEXTBOX_ARROW_DLIST = 0x06001120;

@@ -121,8 +121,7 @@ typedef struct {
     playerVisualData visualData;
     playerParams* params;
     u32 additionalFlags;
-    s16 field_0x4C;
-    s16 field_0x4E;
+    u32 field_0x4C;
     u16 idleTimer;
     s16 field_0x52;
     s16 field_0x54;

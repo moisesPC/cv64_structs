@@ -191,14 +191,15 @@ typedef struct {
 } mfds_state;
 
 extern mfds_state* textbox_create(void* parent_module, void* param_2, u32 flags);              // 0x8012cb88
-extern void textbox_setDimensions(mfds_state* this, s8 height, s16 width, u8 param_4, u8 character_spacing);       // 0x8012cd14
-extern void textbox_setPos(mfds_state* this, u16 text_X_pos, u16 text_Y_pos, s32 unused);      // 0x8012ccfc
-extern void textbox_setMessagePtr(mfds_state* this, u16* text, s32 param_3, s16 param_4);      // 0x8012cd38
-extern void textbox_8012cda4(mfds_state* this, u32 param_2, f32 closing_speed);                // 0x8012cda4
+extern void textbox_setDimensions(mfds_state* self, s8 height, s16 width, u8 param_4, u8 character_spacing);       // 0x8012cd14
+extern void textbox_setPos(mfds_state* self, u16 text_X_pos, u16 text_Y_pos, s32 unused);      // 0x8012ccfc
+extern void textbox_setMessagePtr(mfds_state* self, u16* text, s32 item_amount_number_text, s16 number);      // 0x8012cd38
+extern void textbox_8012cda4(mfds_state* self, u32 param_2, f32 closing_speed);                // 0x8012cda4
 extern void textbox_printNumber(mfds_state*, u8, u32 number);
 extern void* text_getMessageFromPool(u16* message_pool_base_ptr, s32 id);                      // 0x8012ce7c
 extern void text_convertIntNumberToText(u32, u16*, u8, u32);
 extern u16* text_findCharInString(u16* text, u16 char_to_find);
 extern text_color_anim_data text_color_anim_data_table[4][8];
+extern u16* convertUTF16ToCustomTextFormat(u16* text_buffer);
 
 #endif
