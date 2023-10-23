@@ -135,7 +135,7 @@ typedef struct {
     s16 map_fade_in_time;
     u16 field25429_0x6434;
     u16 current_opened_menu;
-    u8 field25433_0x6438[4];
+    //u8 field25433_0x6438[4];
     s32 cutscene_ID;
     s32 entrance_cutscene_ID;	             // 80389efc
     u32 cutscene_flags;
